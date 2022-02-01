@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: red;
+}
+
+.container{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    background-color: white;
+    text-align: center;
+}
+
+.form {
+    margin: 30px 10px;
+    border: 1px solid black;
+    height: 30px;
+}
+
+.btn{
+    padding: 16px 32px;
+    background-color: blue;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 1px solid black;
+}

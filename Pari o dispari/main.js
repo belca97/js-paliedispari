@@ -1,5 +1,13 @@
+// chiedo all'utente di scegliere tra pari e dispari
+let scelta = prompt('Scegli tra pari e dispari');
+let rispostaScelta = scelta;
+
+
 // Chiedo all'utente un numero tra 1 e 5
-let pari_Dispari = parseInt(prompt('Inserisci un numero pari o dispari tra 1 e 5'));
+let pari_Dispari = parseInt(prompt('Inserisci un numero tra 1 e 5'));
+if (isNaN(pari_Dispari) || (pari_Dispari < 1 || pari_Dispari > 5)){
+    alert('Questo non è un numero valido');
+}
 
 // creo una funzione per verificare se il numero è pari o dispari
 function pariDispari(numero) {
@@ -16,7 +24,7 @@ function pariDispari(numero) {
 
 //verifico se la funzione del pari e dispari viene rispettata
 let risposta = pari_Dispari;
-alert('il numero è ' + pariDispari(risposta));
+alert("Il numero dell'utente è " + risposta);
 
 
 // creo una funzione per generare un numero casuale tra 1 e 5
@@ -35,12 +43,14 @@ alert("La somma tra il numero casuale del computer e il numero dell'utente è " 
 console.log(somma)
 
 //Verifico chi è il vincitore con delle condizioni
-if (numeroCasuale > risposta){
+if (pari_Dispari == "pari" && pariDispari(somma) == "pari"){
+    alert('Ha vinto il giocatore');
+} else {
     alert('Ha vinto il computer');
+}
 
-} else if ( risposta > numeroCasuale){
-    alert("Ha vinto l'utente");
-
-} else if (risposta = numeroCasuale) {
-    alert('Questo è un pareggio');
+if (pari_Dispari == "dispari" && pariDispari(somma) == "dispari"){
+    alert('Ha vinto il giocatore');
+} else{
+    alert('Ha vinto il computer');
 }
